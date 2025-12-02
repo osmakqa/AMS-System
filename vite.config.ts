@@ -2,7 +2,10 @@ import path from 'path';
 import { defineConfig, loadEnv } from 'vite';
 import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
+export default defineConfig({
+  base: '/', // This line ensures all asset paths are relative to the root domain (your-app.vercel.app/)
+  plugins: [/* ... */],
+}); {
     const env = loadEnv(mode, '.', '');
     return {
       server: {
