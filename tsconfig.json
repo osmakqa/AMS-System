@@ -20,6 +20,8 @@
     "noUnusedParameters": false,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "**/*.ts", "**/*.tsx"],
-  "references": [{ "path": "./tsconfig.node.json" }]
-}
+"references": [
+    { "path": "./tsconfig.node.json" },
+    { "path": "./tsconfig.app.json" } // Add reference to the new file
+  ]
+}}
