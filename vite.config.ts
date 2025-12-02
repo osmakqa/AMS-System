@@ -11,11 +11,13 @@ export default defineConfig(({ mode }) => {
       },
       plugins: [react()],
       define: {
+        // NOTE: If using VITE's env, the key should start with VITE_
         'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
         'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {
+          // This creates the '@/...' alias
           '@': path.resolve(__dirname, '.'),
         }
       }
